@@ -1,0 +1,45 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-11-18 09:40:24
+ * @LastEditTime: 2020-11-18 09:50:55
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \zelind:\博冉\html\mustache语法.html
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h3>{{talk1 + talk2}},我是何同学</h3>
+        <h3>{{talk1}}{{talk2}},{{talk3}}</h3>
+        <h3>{{talk1 + " " + talk2}}</h3>
+        <h3>{{talk1}} {{talk2}}</h3>
+        <h3>{{number}}</h3>
+        <h3>{{number * 2}}</h3>
+    </div>
+
+    <script src="./../js/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                talk1: "大家",
+                talk2: "好",
+                talk3: "我是何同学",
+                number: 100
+            },
+            methods: {
+
+            }
+        })
+    </script>
+</body>
+
+</html>

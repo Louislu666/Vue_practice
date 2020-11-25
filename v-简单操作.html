@@ -1,0 +1,47 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-11-18 10:04:34
+ * @LastEditTime: 2020-11-23 12:44:58
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \zelind:\博冉\html\v-操作.html
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <h2>{{a}}</h2>
+        <h2 v-once>{{a}}</h2>
+        <h2>{{url}}</h2>
+        <h2 v-html="url"></h2>
+        <h2 v-text="b"></h2>
+        <h2 v-text="b">还能看到我吗</h2>
+        <h2 v-pre>{{a}}</h2>
+    </div>
+
+    <script src="./../js/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                a: "啦啦啦",
+                url: '<a href="http://www.baidu.com">百度一下</a>',
+                b: "嘻嘻嘻"
+            }
+        })
+    </script>
+</body>
+
+</html>

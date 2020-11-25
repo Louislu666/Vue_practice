@@ -1,0 +1,63 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-11-24 16:33:13
+ * @LastEditTime: 2020-11-25 10:25:51
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit!
+ * @FilePath: \zelind:\博冉\html\块级作用域.html
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+
+    <script src="./../js/vue.js"></script>
+    <script>
+        // {
+        //     var i = 'Louis'
+        //     console.log(i)
+        // }
+        // console.log(i)
+
+        // var func
+        // if (true) {
+        //     var name = 'Louis'
+        //     func = function() {
+        //         console.log(name)
+        //     }
+        // }
+        // name = 'Tim'
+        // func()
+
+
+        // ES5写法(for/if无块级作用域)
+        // var btns = document.getElementsByTagName("button")
+        // for (var i = 0; i < btns.length; i++) {
+        //     btns[i].addEventListener("click", function() {
+        //         console.log('第' + i + '个按钮被点击')
+        //     })
+        // }
+
+
+        // ES6写法(for/if有块级作用域)
+        var btns = document.getElementsByTagName('button')
+        for (let i = 0; i < btns.length; i++) {
+            btns[i].addEventListener('click', function() {
+                console.log('第' + (i + 1) + '个按钮被点击')
+            })
+        }
+    </script>
+
+</body>
+
+</html>

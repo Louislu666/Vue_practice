@@ -1,0 +1,48 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-11-20 15:14:09
+ * @LastEditTime: 2020-11-23 14:31:35
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \zelind:\博冉\html\v-bind+v-for案例.html
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h3>{{message}}</h3>
+        <ul>
+            <li v-for="(item,index) in movies" @click="getIndex(item,index)" :key="index" :class="{}">
+                {{index}}-----{{item}}</li>
+        </ul>
+    </div>
+    <script src="./../js/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                message: "你好",
+                movies: ['天气之子', '秒速五厘米', '你的名字', '言叶之庭'],
+                color1: 'red',
+                color2: 'black'
+            },
+            methods: {
+                getIndex(item, index) {
+                    console.log(index)
+
+                    //这里的item是点击获取当前值的每一项内容
+                    //这里的index是点击获取当前值的下标
+                },
+            }
+        })
+    </script>
+</body>
+
+</html>

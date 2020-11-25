@@ -1,0 +1,53 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-11-17 11:05:52
+ * @LastEditTime: 2020-11-17 16:47:44
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \zelind:\博冉\html\计数器.html
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h2>
+            当前计数:{{count}}
+        </h2>
+        <!-- <button v-on:click="count++">+</button>
+        <button v-on:click="count--">-</button> -->
+
+        <!-- <button v-on:click="add">+</button>
+        <button v-on:click="sub">-</button> -->
+
+        <button @click="add">+</button>
+        <button @click="sub">-</button>
+    </div>
+    <script src="./../js/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                count: 0
+            },
+            methods: {
+                add: function() {
+                    console.log("执行加法")
+                    this.count++
+                },
+                sub: function() {
+                    console.log("执行减法")
+                    this.count--
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

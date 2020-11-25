@@ -1,0 +1,40 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-11-20 16:28:18
+ * @LastEditTime: 2020-11-20 16:32:45
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \zelind:\博冉\html\v-bind动态绑定style(数组语法).html
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h3 :style="[basestyle,basestyle2]">{{message}}</h3>
+    </div>
+    <script src="./../js/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                message: "啊啊啊啊啊啊",
+                basestyle: {
+                    fontSize: '50px'
+                },
+                basestyle2: {
+                    backgroundColor: 'skyblue'
+                }
+            },
+            methods: {}
+        })
+    </script>
+</body>
+
+</html>

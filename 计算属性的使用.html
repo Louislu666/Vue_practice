@@ -1,0 +1,90 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-11-20 16:34:51
+ * @LastEditTime: 2020-11-23 11:52:22
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \zelind:\博冉\html\计算属性的使用.html
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div id="app">
+        <h3>{{message}}</h3>
+        <h3>{{firstname}} {{lastname}}</h3>
+        <h3>{{fullName}}</h3>
+        <h3>{{getFullName()}}</h3>
+    </div>
+    <script src="./../js/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                message: "Hello",
+                firstname: "Harry",
+                lastname: "Potter"
+            },
+            methods: {
+                getFullName: function() {
+                    return this.firstname + " " + this.lastname
+                }
+            },
+            computed: {
+                fullName: function() {
+                    return this.firstname + " " + this.lastname
+                }
+            },
+        })
+    </script> -->
+
+    <div id="book">
+        <h3>--------------------------------------------------</h3>
+        <h3>总价格:{{books[0].price + books[1].price + books[2].price + books[3].price}}</h3>
+        <h3>总价格:{{totalPrice}}</h3>
+
+    </div>
+    <script src="./../js/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: "#book",
+            data: {
+                books: [{
+                    id: 001,
+                    name: "新华字典",
+                    price: 56
+                }, {
+                    id: 002,
+                    name: "英汉词典",
+                    price: 48
+                }, {
+                    id: 003,
+                    name: "歇后语大全",
+                    price: 25
+                }, {
+                    id: 004,
+                    name: "十万个为什么",
+                    price: 18
+                }]
+            },
+            methods: {},
+            computed: {
+                totalPrice: function() {
+                    let result = 0
+                    for (let i = 0; i < this.books.length; i++) {
+                        result += this.books[i].price
+                    }
+                    return result
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

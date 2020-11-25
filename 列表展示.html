@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">{{message}}
+        <ul>
+            <li>{{movies[0]}}</li>
+            <li>{{movies[1]}}</li>
+            <li>{{movies[2]}}</li>
+            <li>{{movies[3]}}</li>
+        </ul>
+        <ul>
+            <li v-for="item in movies">{{item}}</li>
+        </ul>
+    </div>
+    <div>{{message}}</div>
+    <script src="./../js/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                message: "你好!",
+                movies: ["变形金刚", "唐伯虎点秋香", "你的名字", "三傻大闹宝莱坞"]
+            }
+        })
+    </script>
+
+</body>
+
+</html>
